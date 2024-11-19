@@ -1,0 +1,9 @@
+Mon Nov 18 2024 18:50:36 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - invalid signature
+Mon Nov 18 2024 19:26:03 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Mon Nov 18 2024 20:28:03 GMT-0600 (hora estándar central) - 400 - ::ffff:127.0.0.1 - Anónimo - Unexpected non-whitespace character after JSON at position 126
+Mon Nov 18 2024 20:29:16 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
+Mon Nov 18 2024 20:30:09 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
+Mon Nov 18 2024 20:30:42 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
+Mon Nov 18 2024 21:31:10 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
+Mon Nov 18 2024 21:32:29 GMT-0600 (hora estándar central) - 500 - ::1 - Anónimo - data and hash arguments required
+Mon Nov 18 2024 21:33:53 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
