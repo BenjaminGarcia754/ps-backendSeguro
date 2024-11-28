@@ -14,13 +14,6 @@
     "/api/categorias/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -30,11 +23,6 @@
       "post": {
         "description": "",
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          },
           {
             "name": "body",
             "in": "body",
@@ -64,11 +52,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -88,11 +71,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -111,11 +89,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "type": "string"
           }
         ],
@@ -137,11 +110,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
             "name": "s",
             "in": "query",
             "type": "string"
@@ -156,11 +124,6 @@
       "post": {
         "description": "",
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          },
           {
             "name": "body",
             "in": "body",
@@ -199,11 +162,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -223,11 +181,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -246,11 +199,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "type": "string"
           }
         ],
@@ -272,11 +220,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "type": "string"
           },
           {
@@ -317,11 +260,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -337,13 +275,6 @@
     "/api/usuarios/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -353,11 +284,6 @@
       "post": {
         "description": "",
         "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          },
           {
             "name": "body",
             "in": "body",
@@ -396,11 +322,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -419,11 +340,6 @@
             "name": "email",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
             "type": "string"
           },
           {
@@ -459,11 +375,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -479,13 +390,6 @@
     "/api/roles/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -526,13 +430,6 @@
     "/api/auth/tiempo": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -546,13 +443,6 @@
     "/api/archivos/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -561,13 +451,6 @@
       },
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -606,11 +489,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -633,11 +511,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -659,11 +532,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -679,13 +547,6 @@
     "/api/bitacora/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
