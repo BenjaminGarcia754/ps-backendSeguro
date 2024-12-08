@@ -7,3 +7,38 @@ Mon Nov 18 2024 20:30:42 GMT-0600 (hora estándar central) - 401 - ::1 - Anónim
 Mon Nov 18 2024 21:31:10 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
 Mon Nov 18 2024 21:32:29 GMT-0600 (hora estándar central) - 500 - ::1 - Anónimo - data and hash arguments required
 Mon Nov 18 2024 21:33:53 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Acceso denegado
+Thu Nov 28 2024 21:19:20 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Cannot read properties of undefined (reading 'startsWith')
+Thu Nov 28 2024 21:20:49 GMT-0600 (hora estándar central) - 401 - ::1 - Anónimo - Cannot read properties of undefined (reading 'startsWith')
+Mon Dec 02 2024 19:56:36 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - invalid token
+Fri Dec 06 2024 19:55:51 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo usuarioid es obligatorio","path":"usuarioid","location":"body"},{"type":"field","msg":"El campo productoid es obligatorio","path":"productoid","location":"body"},{"type":"field","msg":"El total debe ser un número válido","path":"total","location":"body"},{"type":"field","msg":"La fecha es obligatoria y debe ser una fecha válida","path":"fecha","location":"body"}]
+Fri Dec 06 2024 19:57:12 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo usuarioid es obligatorio","path":"usuarioid","location":"body"},{"type":"field","msg":"El campo productoid es obligatorio","path":"productoid","location":"body"},{"type":"field","msg":"La fecha es obligatoria y debe ser una fecha válida","path":"fecha","location":"body"}]
+Fri Dec 06 2024 19:58:03 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo usuarioid es obligatorio","path":"usuarioid","location":"body"},{"type":"field","msg":"El campo productoid es obligatorio","path":"productoid","location":"body"}]
+Fri Dec 06 2024 19:59:58 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo productoid es obligatorio","path":"productoid","location":"body"}]
+Fri Dec 06 2024 20:00:47 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Fri Dec 06 2024 20:01:21 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo productoid es obligatorio","path":"id","location":"body"}]
+Fri Dec 06 2024 20:03:50 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"id","location":"body"}]
+Fri Dec 06 2024 22:17:45 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Fri Dec 06 2024 22:40:51 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Fri Dec 06 2024 22:49:28 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Fri Dec 06 2024 22:49:56 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - productos is not defined
+Fri Dec 06 2024 22:50:33 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - productos is not defined
+Fri Dec 06 2024 22:51:11 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - productosDTO.forEach is not a function
+Fri Dec 06 2024 22:55:05 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"producto.id","location":"body"},{"type":"field","msg":"La cantidad debe ser un número válido","path":"cantidad","location":"body"}]
+Fri Dec 06 2024 22:56:06 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"producto.id","location":"body"},{"type":"field","msg":"La cantidad debe ser un número válido","path":"cantidad","location":"body"}]
+Fri Dec 06 2024 23:03:47 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"producto.id","location":"body"},{"type":"field","msg":"La cantidad debe ser un número válido","path":"cantidad","location":"body"}]
+Fri Dec 06 2024 23:09:35 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - Cannot add or update a child row: a foreign key constraint fails (`mercadolibrenode`.`compra`, CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`usuarioid`) REFERENCES `usuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+Sat Dec 07 2024 17:51:46 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Sat Dec 07 2024 17:52:05 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - Cannot add or update a child row: a foreign key constraint fails (`mercadolibrenode`.`compra`, CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`usuarioid`) REFERENCES `usuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+Sat Dec 07 2024 17:55:30 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - notNull Violation: compra.usuarioid cannot be null
+Sat Dec 07 2024 18:32:34 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Sat Dec 07 2024 18:33:48 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"[0].usuario.id","location":"body"}]
+Sat Dec 07 2024 18:35:08 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"[0].usuario.id","location":"body"}]
+Sat Dec 07 2024 18:36:17 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","msg":"El campo id es obligatorio","path":"[0].usuario.id","location":"body"}]
+Sat Dec 07 2024 18:51:15 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","value":-100,"msg":"EL precio debe ser un numero valido","path":"[0].producto.precio","location":"body"}]
+Sat Dec 07 2024 18:51:35 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","value":-2,"msg":"La cantidad debe ser un número válido","path":"[0].cantidad","location":"body"},{"type":"field","value":-100,"msg":"EL precio debe ser un numero valido","path":"[0].producto.precio","location":"body"}]
+Sat Dec 07 2024 18:52:03 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - El producto con ID 100 no existe.
+Sat Dec 07 2024 18:52:44 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - [{"type":"field","value":null,"msg":"EL precio debe ser un numero valido","path":"[0].producto.precio","location":"body"}]
+Sat Dec 07 2024 18:53:00 GMT-0600 (hora estándar central) - 401 - ::ffff:127.0.0.1 - Anónimo - jwt expired
+Sat Dec 07 2024 19:07:02 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - El producto con ID 100 no existe.
+Sat Dec 07 2024 19:07:43 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - No hay suficiente stock para el producto 1. Stock disponible: 8.
+Sat Dec 07 2024 19:08:01 GMT-0600 (hora estándar central) - 500 - ::ffff:127.0.0.1 - undefined - No hay suficiente stock para el producto 1. Stock disponible: 0.
