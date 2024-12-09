@@ -5,7 +5,6 @@ const { body, validationResult } = require('express-validator');
 
 let self = {};
 
-// Validación para la creación y actualización de compras
 self.compraValidator = [
     body().isArray().withMessage('El cuerpo de la solicitud debe ser un array de productos'),
     body('*.producto.id', 'El campo id es obligatorio').not().isEmpty(),
@@ -31,6 +30,7 @@ self.getAll = async function (req, res, next) {
 self.get = async function (req, res, next) {
     try {
         const id = req.params.id;
+        console.log(id);
         const data = await compra.findByPk(id);
         if (data) res.status(200).json(data);
         else res.status(404).send();
@@ -78,6 +78,10 @@ self.create = async function (req, res, next) {
             }
             const compraDTO = new CompraDTO(productoData, cantidad);
             totalD = cantidad * productoData.precio;
+
+            if (totalD > Number.MAX_VALUE){
+                throw new Error('El total de la compra es demasiado grande');
+            }
 
             const nuevaCompra = await compra.create({
                 usuarioid: productosDTO[i].usuarioid,

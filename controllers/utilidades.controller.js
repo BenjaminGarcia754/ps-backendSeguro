@@ -5,13 +5,11 @@ const { validationResult, body } = require('express-validator');
 
 let self = {};
 
-// POST: api/utilidades
-self.create = [
-    // Validaciones
+self.utilidadesValidator = [
     body('email')
         .notEmpty().withMessage('El correo es obligatorio')
         .isEmail().withMessage('El correo no tiene un formato válido'),
-    body('password', 'La contraseña debe cumplir con los requisitos de seguridad')
+    body('passwordhash', 'La contraseña debe cumplir con los requisitos de seguridad')
         .isStrongPassword({
             minLength: 8,
             minLowercase: 1,
@@ -22,41 +20,36 @@ self.create = [
     body('nombre')
         .notEmpty().withMessage('El nombre es obligatorio')
         .isString().withMessage('El nombre debe ser un texto válido'),
-    body('rol')
+    body('rolid')
         .notEmpty().withMessage('El rol es obligatorio')
-        .isString().withMessage('El rol debe ser un texto válido'),
+        .isString().withMessage('El rol debe ser un texto válido')
+];
 
-    // Lógica para crear usuario
-    async function (req, res, next) {
+// POST: api/utilidades
+self.create = async function (req, res, next) {
         try {
-            // Verificar los errores de validación
-            const errors = validationResult(req);
-            if (!errors.isEmpty()) {
-                return res.status(400).json({ errors: errors.array() });
-            }
 
-            // Verificar si el correo ya existe
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) throw new Error(JSON.stringify(errors.array()));
+
             const emailExists = await usuario.findOne({ where: { email: req.body.email } });
             if (emailExists) {
                 return res.status(409).json({ error: 'El correo electrónico ya está registrado.' });
             }
 
-            // Verificar si el rol existe
-            const rolUsuario = await rol.findOne({ where: { nombre: req.body.rol } });
+            const rolUsuario = await rol.findOne({ where: { id: req.body.rolid } });
             if (!rolUsuario) {
                 return res.status(400).json({ error: 'El rol especificado no existe.' });
             }
 
-            // Crear nuevo usuario
-            const newUser = await usuario.create({
+                const newUser = await usuario.create({
                 id: crypto.randomUUID(),
                 email: req.body.email,
-                passwordhash: await bcrypt.hash(req.body.password, 10),
+                passwordhash: await bcrypt.hash(req.body.passwordhash, 10),
                 nombre: req.body.nombre,
                 rolid: rolUsuario.id,
             });
 
-            // Bitacora
             req.bitacora('usuarios.crear', newUser.email);
 
             res.status(201).json({
@@ -68,7 +61,6 @@ self.create = [
         } catch (error) {
             next(error);
         }
-    },
-];
+    }
 
 module.exports = self;
