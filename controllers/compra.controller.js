@@ -102,26 +102,6 @@ self.create = async function (req, res, next) {
     }
 };
 
-// PUT: api/compras/:id
-self.update = async function (req, res, next) {
-    try {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) throw new Error(JSON.stringify(errors.array()));
-
-        const id = req.params.id;
-        const [updated] = await compra.update(req.body, { where: { id } });
-
-        if (updated) {
-            req.bitacora('compra.editar', id);
-            res.status(204).send();
-        } else {
-            res.status(404).send();
-        }
-    } catch (error) {
-        next(error);
-    }
-};
-
 // DELETE: api/compras/:id
 self.delete = async function (req, res, next) {
     try {

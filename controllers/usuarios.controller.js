@@ -37,33 +37,6 @@ self.get = async function (req, res, next) {
     }
 }
 
-// POST: api/usuarios
-self.create = async function (req, res, next) {
-    try {
-        const rolusuario = await rol.findOne({ where: { nombre: req.body.rol } })
-
-        const data = await usuario.create({
-            id: crypto.randomUUID(),
-            email: req.body.email,
-            passwordhash: await bcrypt.hash(req.body.password, 10),
-            nombre: req.body.nombre,
-            rolid: rolusuario.id
-        })
-        
-        // Bitacora
-        req.bitacora("usuarios.crear", data.email)
-        res.status(201).json({
-            id: data.id,
-            email: data.email,
-            nombre: data.nombre,
-            rolid: rolusuario.nombre
-        })
-    } catch (error) {
-        next(error)
-    }
-}
-
-
 //PUT: api/usuarios/email
 self.update = async function (req, res, next) {
     try{

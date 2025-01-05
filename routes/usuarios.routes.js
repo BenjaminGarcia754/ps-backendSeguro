@@ -7,10 +7,6 @@ router.get('/', Authorize('Administrador'), usuarios.getAll);
 
 //GET: api/usuarios/emaik
 router.get('/:email', Authorize('Administrador'), usuarios.get);
-
-//POST: api/usuarios
-router.post('/', Authorize('Administrador'), usuarios.create);
-
 //PUT: api/usuarios/email
 router.put('/:email', Authorize('Administrador'), usuarios.update);
 
