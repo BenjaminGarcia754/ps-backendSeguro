@@ -4,7 +4,6 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class compra extends Model {
     static associate(models) {
-      compra.belongsTo(models.usuario, { foreignKey: 'usuarioid' });
       compra.belongsTo(models.producto, { foreignKey: 'productoid' });
     }
   }
@@ -15,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    usuarioid: {
+    correousuario: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -42,6 +41,5 @@ module.exports = (sequelize, DataTypes) => {
     freezeTableName: true,
     modelName: 'compra',
   });
-
   return compra;
 };

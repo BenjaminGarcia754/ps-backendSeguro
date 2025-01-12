@@ -13,7 +13,7 @@ router.get('/:id', Authorize('Usuario,Administrador'), compraController.get);
 router.post('/', Authorize('Usuario,Administrador'), compraValidator, compraController.create);
 
 // PUT: api/compras/:id
-router.put('/:id', Authorize('Administrador'), compraValidator, compraController.update);
+//router.put('/:id', Authorize('Administrador'), compraValidator, compraController.update);
 
 // DELETE: api/compras/:id
 router.delete('/:id', Authorize('Administrador'), compraController.delete);

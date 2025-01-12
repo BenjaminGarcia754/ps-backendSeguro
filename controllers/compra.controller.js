@@ -9,7 +9,7 @@ self.compraValidator = [
     body().isArray().withMessage('El cuerpo de la solicitud debe ser un array de productos'),
     body('*.producto.id', 'El campo id es obligatorio').not().isEmpty(),
     body('*.cantidad', 'La cantidad debe ser un número válido').isInt({ min: 1 }),
-    body('*.usuarioid', 'El campo id es obligatorio').not().isEmpty(),
+    body('*.correousuario', 'El campo correo es obligatorio').not().isEmpty(),
     body('*.producto.precio', 'EL precio debe ser un numero valido').isFloat({ min: 1.00 })
 ];
 
@@ -84,7 +84,7 @@ self.create = async function (req, res, next) {
             }
 
             const nuevaCompra = await compra.create({
-                usuarioid: productosDTO[i].usuarioid,
+                correousuario: productosDTO[i].correousuario,
                 productoid: productoData.id,
                 cantidad: cantidad,
                 total: totalD,
